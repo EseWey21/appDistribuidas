@@ -6,7 +6,7 @@ Este repositorio funciona como evidencia de aprendizaje y evolución técnica du
 
 ---
 
-## 👨‍🎓 Información del Alumno
+## Información del Alumno
 
 - **Nombre:** Edgar Sajit López Ventura  
 - **Materia:** Aplicaciones Distribuidas  
@@ -14,34 +14,32 @@ Este repositorio funciona como evidencia de aprendizaje y evolución técnica du
 
 ---
 
-## 🎯 Objetivo del Repositorio
+## Objetivo del Repositorio
 
 El propósito de este portafolio es:
 
-- 📌 Entregar tareas y prácticas solicitadas en clase  
-- 🧠 Aplicar conceptos de sistemas distribuidos  
-- 💻 Desarrollar soluciones prácticas y documentadas  
-- 🚀 Mostrar progreso técnico y buenas prácticas de desarrollo  
+- Entregar tareas y prácticas solicitadas en clase  
+- Aplicar conceptos de sistemas distribuidos  
+- Desarrollar soluciones prácticas y documentadas  
+- Mostrar progreso técnico y buenas prácticas de desarrollo  
 
 ---
 
-## 🛠️ Contenido
+## Contenido
 
 En este repositorio podrás encontrar:
 
-- 📝 Prácticas individuales  
-- 📦 Proyectos relacionados con aplicaciones distribuidas  
-- ⚙️ Implementaciones backend / frontend (según aplique)  
-- 📄 Documentación y explicaciones técnicas  
+- Prácticas individuales  
+- Proyectos relacionados con aplicaciones distribuidas  
+- Implementaciones backend / frontend (según aplique)  
+- Documentación y explicaciones técnicas  
 
 Cada carpeta o proyecto contará con su propia descripción cuando sea necesario.
 
 ---
 
-## 📌 Notas
+## Notas
 
 Este repositorio se irá **actualizando constantemente** conforme avance el curso y se asignen nuevas actividades.
 
 ---
-
-✨ *Gracias por visitar mi portafolio académico.*

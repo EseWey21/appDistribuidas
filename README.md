@@ -31,7 +31,7 @@ En este repositorio podrás encontrar:
 
 - Prácticas individuales  
 - Proyectos relacionados con aplicaciones distribuidas  
-- Implementaciones backend / frontend (según aplique)  
+- Implementaciones backend / frontend
 - Documentación y explicaciones técnicas  
 
 Cada carpeta o proyecto contará con su propia descripción cuando sea necesario.

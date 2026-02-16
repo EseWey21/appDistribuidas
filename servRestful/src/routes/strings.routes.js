@@ -6,6 +6,10 @@ const {
 	masCaracteres,
 	menosCaracteres,
     numCaracteres, 
+	palindroma,
+	concat,
+	applysha256,
+	verifysha256,
 } = require("../controllers/strings.controller");
 
 router.get("/ping", ping);
@@ -18,5 +22,17 @@ router.post("/menoscaracteres", menosCaracteres);
 
 // 3) numcaracteres
 router.post("/numcaracteres", numCaracteres);
+
+// 4) palindroma
+router.post("/palindroma", palindroma);
+
+// 5) concat
+router.post("/concat", concat);
+
+// 6) applysha256
+router.post("/applysha256", applysha256);
+
+// 7) verifysha256
+router.post("/verifysha256", verifysha256);
 
 module.exports = router;

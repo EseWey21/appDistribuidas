@@ -183,13 +183,4 @@ Salida:
 - Tipo string no vacío (`requireString`)
 - En `verifysha256`, `encriptada` debe tener formato SHA256 hex (64 caracteres)
 
-## Ejemplos rápidos (curl)
-```bash
-curl -s -X POST http://localhost:3000/api/palindroma \
-  -H 'Content-Type: application/json' \
-  -d '{"cadena":"¿Anita lava la tina?"}'
 
-curl -s -X POST http://localhost:3000/api/verifysha256 \
-  -H 'Content-Type: application/json' \
-  -d '{"encriptada":"2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824","normal":"hola"}'
-```

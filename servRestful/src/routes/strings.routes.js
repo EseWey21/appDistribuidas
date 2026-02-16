@@ -5,6 +5,7 @@ const {
 	ping,
 	masCaracteres,
 	menosCaracteres,
+    numCaracteres, 
 } = require("../controllers/strings.controller");
 
 router.get("/ping", ping);
@@ -14,5 +15,8 @@ router.post("/mascaracteres", masCaracteres);
 
 // 2) menoscaracteres
 router.post("/menoscaracteres", menosCaracteres);
+
+// 3) numcaracteres
+router.post("/numcaracteres", numCaracteres);
 
 module.exports = router;

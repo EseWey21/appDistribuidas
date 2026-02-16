@@ -37,4 +37,15 @@ function menosCaracteres(req, res) {
   return ok(res, { resultado });
 }
 
-module.exports = { ping, masCaracteres, menosCaracteres };
+// numcaracteres: recibe una cadena y regresa el número de caracteres
+function numCaracteres(req, res) {
+  const v = requireString(req.body, "cadena");
+  if (!v.ok) return fail(res, v.error);
+
+  const cadena = v.value;
+  const resultado = cadena.length;
+
+  return ok(res, { resultado });
+}
+
+module.exports = { ping, masCaracteres, menosCaracteres, numCaracteres };

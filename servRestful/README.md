@@ -68,7 +68,7 @@ Error:
 
 ## Endpoints
 
-### 1) POST `/mascaracteres`
+### 1) POST `/api/mascaracteres`
 Regresa la cadena con más caracteres (si hay empate, regresa `cadena1`).
 
 Entrada:
@@ -81,7 +81,7 @@ Salida:
 { "ok": true, "resultado": "mundo" }
 ```
 
-### 2) POST `/menoscaracteres`
+### 2) POST `/api/menoscaracteres`
 Regresa la cadena con menos caracteres (si hay empate, regresa `cadena1`).
 
 Entrada:
@@ -94,7 +94,7 @@ Salida:
 { "ok": true, "resultado": "hola" }
 ```
 
-### 3) POST `/numcaracteres`
+### 3) POST `/api/numcaracteres`
 Regresa el número de caracteres de una cadena.
 
 Entrada:
@@ -107,7 +107,7 @@ Salida:
 { "ok": true, "resultado": 4 }
 ```
 
-### 4) POST `/palindroma`
+### 4) POST `/api/palindroma`
 Regresa `true` si la cadena es palíndroma, `false` en otro caso.
 
 Normalización aplicada:
@@ -125,7 +125,7 @@ Salida:
 { "ok": true, "resultado": true }
 ```
 
-### 5) POST `/concat`
+### 5) POST `/api/concat`
 Concatena dos cadenas iniciando con `cadena1`.
 
 Entrada:
@@ -138,7 +138,7 @@ Salida:
 { "ok": true, "resultado": "holamundo" }
 ```
 
-### 6) POST `/applysha256`
+### 6) POST `/api/applysha256`
 Aplica SHA256 a una cadena y regresa la original y la encriptada.
 
 Entrada:
@@ -155,7 +155,7 @@ Salida:
 }
 ```
 
-### 7) POST `/verifysha256`
+### 7) POST `/api/verifysha256`
 Recibe una cadena encriptada (SHA256) y una cadena normal; calcula SHA256 de la normal y compara.
 
 Campos:

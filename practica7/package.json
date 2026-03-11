@@ -1,0 +1,19 @@
+{
+  "name": "practica7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "insertMongoDB.js",
+  "scripts": {
+    "dev": "node insertMongoDB.js",
+    "start": "node insertMongoDB.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^7.1.0"
+  }
+}

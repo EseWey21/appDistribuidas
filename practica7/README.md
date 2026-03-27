@@ -1,150 +1,62 @@
-# Práctica 7 – Aplicaciones Distribuidas
+# Practica 7 - Insercion en MongoDB con Express
 
-## Descripción
-
-Servidor RESTful desarrollado con **Express.js** y **MongoDB Atlas**. Demuestra diferentes formas de enviar y recibir datos a través de servicios web, así como la inserción de documentos en una base de datos NoSQL en la nube.
-
-## Requisitos previos
-
-- Node.js v14+
-- npm
-- Conexión a internet (MongoDB Atlas)
-
-## Instalación y ejecución
+## 1) Descargar el codigo
+Si ya tienes el repositorio, entra a la carpeta de la practica:
 
 ```bash
-# 1. Instalar dependencias
-npm install
+cd /Users/esewey21/Desktop/appDistribuidas/practica7
+```
 
-# 2. Iniciar el servidor
+Si no tienes dependencias instaladas:
+
+```bash
+npm install express mongodb
+```
+
+## 2) Ajustar la URI de MongoDB
+En `insertMongoDB.js`, dentro de la funcion `connectDB()`, define tu URI de MongoDB Atlas.
+
+## 3) Probar el codigo
+Ejecuta el servidor:
+
+```bash
 npm run dev
 ```
 
-El servidor queda disponible en **http://localhost:3000**.
+Servidor esperado:
 
-## Tecnologías utilizadas
+- Puerto: `3000`
+- Mensaje en consola: `Conectado correctamente a MongoDB Atlas`
 
-| Tecnología | Versión | Uso |
-|---|---|---|
-| Express | ^5.2.1 | Framework web para crear los endpoints REST |
-| MongoDB Driver | ^7.1.0 | Conexión y operaciones con MongoDB Atlas |
-| Node.js | 14+ | Entorno de ejecución |
+## 4) Validar la operacion en el server de MongoDB
+La aplicacion usa:
 
-## Estructura del proyecto
+- Base de datos: `practica7`
+- Coleccion: `recipes`
 
-```
-practica7/
-├── insertMongoDB.js   # Servidor principal con todos los endpoints
-├── package.json       # Configuración del proyecto y dependencias
-├── README.md          # Documentación
-└── node_modules/      # Dependencias instaladas (generado por npm)
-```
+Puedes validar con MongoDB Compass o con Mongo Shell.
 
-## Configuración de MongoDB
+Consulta de validacion:
 
-El servidor se conecta automáticamente al clúster de MongoDB Atlas al iniciar. Utiliza la base de datos `myDatabase` y la colección `recipes`.
-
-## Endpoints
-
-### `GET /` — Health check
-
-Verifica que el servidor esté activo.
-
-```
-GET http://localhost:3000/
+```javascript
+use practica7
+db.recipes.find().pretty()
 ```
 
-Respuesta:
+## 5) Documentacion del codigo
+Endpoints disponibles:
+
+- `GET /`
+- `POST /insertar`
+- `GET /registros`
+- `POST /receipt/insert`
+
+## 6) Modificacion solicitada en `/receipt/insert`
+Se modifico el endpoint para que reciba `recipes` como parametro en el body JSON.
+
+### Formato esperado
+
 ```json
-{ "message": "Nothing to send" }
-```
-
----
-
-### `GET /serv001` — Datos por query params
-
-Recibe `id`, `token` y `geo` como parámetros en la URL.
-
-```
-GET http://localhost:3000/serv001?id=Nope&token=2345678dhuj43567fgh&geo=123456789,1234567890
-```
-
-Respuesta:
-```json
-{
-  "user_id": "Nope",
-  "token": "2345678dhuj43567fgh",
-  "geo": "123456789,1234567890"
-}
-```
-
----
-
-### `GET /serv0010` — Variante de serv001
-
-Mismo comportamiento que `/serv001`. Endpoint duplicado con fines demostrativos.
-
----
-
-### `POST /serv002` — Datos por body (JSON)
-
-Recibe `id`, `token` y `geo` en el cuerpo de la petición.
-
-```
-POST http://localhost:3000/serv002
-Content-Type: application/json
-
-{
-  "id": "nope",
-  "token": "ertydfg456Dfgwerty",
-  "geo": "12345678,34567890"
-}
-```
-
-Respuesta:
-```json
-{
-  "user_id": "nope",
-  "token": "ertydfg456Dfgwerty",
-  "geo": "12345678,34567890"
-}
-```
-
----
-
-### `POST /serv003/:info` — Parámetro en la URL
-
-Recibe un dato directamente como parte de la ruta.
-
-```
-POST http://localhost:3000/serv003/1234567
-```
-
-Respuesta:
-```json
-{ "info": "1234567" }
-```
-
----
-
-### `POST /receipt/insert` — Insertar recetas en MongoDB
-
-Inserta una o más recetas en la colección `recipes` de MongoDB Atlas.
-
-#### Modificación realizada respecto al código original
-
-| Aspecto | Antes | Después |
-|---|---|---|
-| Origen de datos | Hard-coded en el servidor (siempre "elotes cocidos") | Se reciben dinámicamente desde el body de la petición |
-| Flexibilidad | Solo insertaba una receta fija | Permite insertar cualquier cantidad de recetas |
-| Validación | Ninguna | Valida que `recipes` sea un arreglo no vacío |
-
-#### Ejemplo de uso
-
-```
-POST http://localhost:3000/receipt/insert
-Content-Type: application/json
-
 {
   "recipes": [
     {
@@ -153,36 +65,48 @@ Content-Type: application/json
       "prepTimeInMinutes": 35
     },
     {
-      "name": "guacamole",
-      "ingredients": ["avocado", "tomato", "onion", "cilantro", "lime", "salt"],
-      "prepTimeInMinutes": 15
+      "name": "quesadilla",
+      "ingredients": ["tortilla", "cheese"],
+      "prepTimeInMinutes": 10
     }
   ]
 }
 ```
 
-Respuesta exitosa:
-```json
-{ "result": "2 documents successfully inserted." }
+### Prueba con curl
+
+```bash
+curl -X POST http://localhost:3000/receipt/insert \
+  -H "Content-Type: application/json" \
+  -d '{
+    "recipes": [
+      {
+        "name": "elotes cocidos",
+        "ingredients": ["corn", "mayonnaise", "cotija cheese", "sour cream", "lime"],
+        "prepTimeInMinutes": 35
+      }
+    ]
+  }'
 ```
 
-Respuesta de error (body vacío o inválido) — HTTP 400:
+Respuesta esperada (ejemplo):
+
 ```json
-{ "result": "Error: Se debe enviar un arreglo 'recipes' en el body de la petición con al menos un elemento." }
+{
+  "result": "1 documents successfully inserted.",
+  "insertedCount": 1,
+  "insertedIds": {
+    "0": "<ObjectId>"
+  }
+}
 ```
 
-#### Esquema de cada receta
+Si `recipes` no se envia o va vacio, responde `400 Bad Request`.
 
-| Campo | Tipo | Descripción |
-|---|---|---|
-| `name` | string | Nombre de la receta |
-| `ingredients` | string[] | Lista de ingredientes |
-| `prepTimeInMinutes` | number | Tiempo de preparación en minutos |
+## 7) Agregar esta parte a la documentacion
+Esta version del README ya incluye:
 
-## Verificación en MongoDB Atlas
-
-1. Ingresar a [MongoDB Atlas](https://cloud.mongodb.com/)
-2. Ir a **Database** → **Browse Collections**
-3. Seleccionar la base de datos `myDatabase`
-4. Abrir la colección `recipes`
-5. Los documentos insertados aparecerán con los campos `name`, `ingredients` y `prepTimeInMinutes`
+- Uso del nuevo formato de `recipes` en `/receipt/insert`
+- Ejemplo de request
+- Ejemplo de respuesta
+- Forma de validacion en MongoDB

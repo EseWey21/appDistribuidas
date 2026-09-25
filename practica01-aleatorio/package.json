@@ -1,0 +1,19 @@
+{
+  "name": "practica01-aleatorio",
+  "version": "1.0.0",
+  "description": "Primer servidor REST con Express: ruta raíz y generador de números aleatorios.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "practica05-conexion-mongodb",
+  "version": "1.0.0",
+  "description": "Conexión a MongoDB Atlas con el driver oficial: ping y listado de bases de datos.",
+  "main": "ping.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "ping": "node ping.js",
+    "listar-bases": "node listar-bases.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.3",
+    "mongodb": "^7.6.0"
+  }
+}

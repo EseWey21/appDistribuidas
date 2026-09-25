@@ -1,0 +1,20 @@
+{
+  "name": "practica06-consultas-mongodb",
+  "version": "1.0.0",
+  "description": "Consultas con proyección sobre la base de ejemplo sample_mflix.",
+  "main": "consultas.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node consultas.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.3",
+    "mongodb": "^7.6.0"
+  }
+}

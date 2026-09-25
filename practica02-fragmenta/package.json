@@ -1,0 +1,19 @@
+{
+  "name": "practica02-fragmenta",
+  "version": "1.0.0",
+  "description": "Servicio POST que fragmenta una coordenada (lat, long) en su parte entera y decimal.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

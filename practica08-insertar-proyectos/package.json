@@ -1,0 +1,21 @@
+{
+  "name": "practica08-insertar-proyectos",
+  "version": "1.0.0",
+  "description": "Inserción dinámica de proyectos en MongoDB a partir del body del request.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "mongodb": "^7.6.0"
+  }
+}

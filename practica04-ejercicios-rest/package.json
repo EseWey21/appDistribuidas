@@ -1,0 +1,19 @@
+{
+  "name": "practica04-ejercicios-rest",
+  "version": "1.0.0",
+  "description": "Siete ejercicios REST: saludo, calculadora, CRUD de tareas, validación de password, conversión de temperatura, búsqueda y conteo de palabras.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -1,4 +1,0 @@
-# Environment variables (no subir a GitHub)
-.env
-.env.*
-!.env.example

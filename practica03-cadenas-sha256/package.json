@@ -1,0 +1,19 @@
+{
+  "name": "practica03-cadenas-sha256",
+  "version": "1.0.0",
+  "description": "Servicios de manipulación de cadenas y hashing/verificación SHA-256.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

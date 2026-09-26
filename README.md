@@ -28,7 +28,7 @@ Este repositorio funciona como evidencia de aprendizaje y evolución técnica du
 | 8 | Insertar proyectos | [`practica08-insertar-proyectos`](./practica08-insertar-proyectos) | Express, MongoDB | Inserción dinámica de proyectos a partir del body del request. |
 | 9 | CRUD con borrado lógico | [`practica09-crud-proyectos`](./practica09-crud-proyectos) | Express, MongoDB | CRUD completo distinguiendo borrado físico y borrado lógico. |
 | 10 | Usuarios y login | [`practica10-usuarios-login`](./practica10-usuarios-login) | Express, MongoDB, crypto | CRUD de usuarios con contraseña cifrada (SHA-256) y servicio de login. |
-| 11 | Login en dos pasos con PIN | [`practica11-login-2fa-pin`](./practica11-login-2fa-pin) | Express, MongoDB, Nodemailer | Segundo factor de autenticación con PIN enviado por correo. |
+| 11 | Login en dos pasos con PIN | [`practica11-login-2fa`](./practica11-login-2fa) | Express, MongoDB, Nodemailer | Segundo factor de autenticación con PIN enviado por correo. |
 | 12 | Primera app de React | [`practica12-react-vite`](./practica12-react-vite) | React, Vite | Primer proyecto de React creado con Vite. |
 
 ---

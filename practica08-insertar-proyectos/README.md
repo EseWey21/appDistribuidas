@@ -58,3 +58,7 @@ Servidor levantado con `node index.js`, todas las rutas probadas con `curl` cont
 **Inserción de 3 proyectos reales y un caso con campos faltantes (400):**
 
 ![insertar proyectos](./docs/02-insertar-proyectos.png)
+
+**Colección `proyectos` en Atlas Data Explorer**, con los 6 proyectos insertados durante las pruebas:
+
+![Atlas Data Explorer - proyectos](./docs/03-atlas-proyectos.png)

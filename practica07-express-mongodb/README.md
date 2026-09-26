@@ -58,3 +58,7 @@ Servidor levantado con `node index.js`, todas las rutas probadas con `curl` cont
 **`/receipt/insert`:**
 
 ![insertar receta](./docs/02-insert-receta.png)
+
+**Colección `recipes` en Atlas Data Explorer**, confirmando las inserciones reales:
+
+![Atlas Data Explorer - recipes](./docs/03-atlas-recipes.png)
